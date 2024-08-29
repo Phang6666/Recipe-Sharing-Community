@@ -1,0 +1,217 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  scroll-behavior: smooth;
+}
+
+
+.no-records {
+  color: red;
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+#search-button {
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.recipe-card {
+  position: relative;
+  width: 300px;
+  height: 300px; /* Set a fixed height for the recipe card */
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: white; /* Set background color to black */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-content {
+  padding: 20px;
+  height: calc(100% - 40px); /* Subtract padding from the total height */
+}
+
+.recipe-content img {
+  width: 100%; /* Ensure the image takes up the full width of its container */
+  height: 200px; /* Set a fixed height for the image */
+  object-fit: cover; /* Maintain aspect ratio while covering the entire container */
+  border-radius: 5px; /* Add rounded corners to the image */
+  margin-bottom: 10px;
+}
+
+.view-recipe {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* Set a fixed width for the button */
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.view-recipe:hover {
+  background-color: #031021;
+}
+
+
+/* Heart animation */
+
+@keyframes like-anime {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+/* Heart button styling */
+.like-button .heart-bg {
+  background: rgb(255, 192, 200, 0);
+  border-radius: 50%;
+  height: 30px; /* Adjust height as needed */
+  width: 30px; /* Adjust width as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Add cursor pointer for better UX */
+  transition: all 100ms ease;
+}
+
+.like-button {
+  position: absolute; /* Position the like button */
+  top: 10px; /* Adjust top position */
+  right: 10px; /* Adjust right position */
+  z-index: 1; /* Ensure it's above the recipe card */
+}
+
+/* Adjust the heart icon size */
+.like-button .heart-icon {
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  background-image: url('photo/heart.png'); /* Replace 'heart.png' with your heart icon image */
+  background-size: cover;
+  background-position: center; /* Set the initial background position */
+  transition: transform 0.3s ease, background-position 0.7s; /* Add background-position transition */
+}
+
+/* Heart animation */
+.like-button .heart-icon.liked {
+  filter: invert(45%) sepia(96%) saturate(1639%) hue-rotate(333deg) brightness(102%) contrast(102%);
+  transform: none; /* Reset transform property for liked state */
+  background-position: 100% 0; /* Adjusted background position for liked state */
+}
+
+
+/*header*/
+
+header {
+  background-color: #000000;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.logo img {
+  height: 60px;
+  margin-left:50px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+
+/* Footer*/
+
+.footer {
+  background-color: #070e16;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-social a {
+  color: #fff;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+
+
+
